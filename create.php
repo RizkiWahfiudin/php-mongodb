@@ -4,13 +4,13 @@
       require 'config.php';
 
       $insertOneResult = $collection->insertOne([
-          'judul' => $_POST['judul'],
-          'penerbit' => $_POST['penerbit'],
-          'tahun' => $_POST['tahun']
+          'nama_rumah_sakit' => $_POST['nama_rumah_sakit'],
+          'jenis_rumah_sakit' => $_POST['jenis_rumah_sakit'],
+          'alamat_rumah_sakit' => $_POST['alamat_rumah_sakit']
       ]);
 
 
-      $_SESSION['success'] = "Data Buku Berhasil Ditambahkan";
+      $_SESSION['success'] = "Data Rumah Sakit Berhasil Ditambahkan";
       header("Location: index.php");
    }
 ?>
@@ -25,21 +25,21 @@
 <body>
 
 <div class="container">
-   <h1>Buat Data Buku</h1>
+   <h1>Buat Data Rumah Sakit</h1>
    <a href="index.php" class="btn btn-primary">Kembali</a>
 
    <form method="POST">
       <div class="form-group">
-         <strong>Judul</strong>
-         <input type="text" name="judul" required="" class="form-control" placeholder="Judul Buku">
+         <strong>Nama Rumah Sakit</strong>
+         <input type="text" name="nama_rumah_sakit" required="" class="form-control" placeholder="Masukkan Nama Rumah Sakit">
       </div>
       <div class="form-group">
-         <strong>Penerbit</strong>
-         <input type="text" name="penerbit" required="" class="form-control" placeholder="Nama Penerbit">
+         <strong>Jenis</strong>
+         <input type="text" name="jenis_rumah_sakit" required="" class="form-control" placeholder="Masukkan Jenis Rumah Sakit">
       </div>
       <div class="form-group">
-         <strong>Tahun Terbit</strong>
-         <input type="text" name="tahun" required="" class="form-control" placeholder="Tahun Terbit">
+         <strong>Alamat</strong>
+         <textarea class="form-control" name="alamat_rumah_sakit" placeholder="Masukkan Alamat Rumah Sakit"></textarea>
       </div>
       <div class="form-group">
          <button type="submit" name="submit" class="btn btn-success">Submit</button>

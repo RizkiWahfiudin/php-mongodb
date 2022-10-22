@@ -12,7 +12,7 @@
    <div class="container">
       <h1>PHP & MongoDB - CRUD</h1>
 
-      <a href="create.php" class="btn btn-success">Tambah Data Buku</a>
+      <a href="create.php" class="btn btn-success">Tambah Data Rumah Sakit</a>
 
       <?php
          if(isset($_SESSION['success'])){
@@ -22,23 +22,23 @@
 
       <table class="table table-borderd">
          <tr>
-            <th>Judul</th>
-            <th>Penerbit</th>
-            <th>Tahun</th>
+            <th>Nama</th>
+            <th>Jenis</th>
+            <th>Alamat</th>
             <th>Action</th>
          </tr>
 
          <?php
             require 'config.php';
-            $books = $collection->find([]);
-            foreach($books as $book) {
+            $hospitals = $collection->find([]);
+            foreach($hospitals as $hospital) {
                echo "<tr>";
-               echo "<td>".$book->judul."</td>";
-               echo "<td>".$book->penerbit."</td>";
-               echo "<td>".$book->tahun."</td>";
+               echo "<td>".$hospital->nama_rumah_sakit."</td>";
+               echo "<td>".$hospital->jenis_rumah_sakit."</td>";
+               echo "<td>".$hospital->alamat_rumah_sakit."</td>";
                echo "<td>";
-               echo "<a href='edit.php?id=".$book->_id."' class='btn btn-primary'>Edit</a>";
-               echo "<a href='delete.php?id=".$book->_id."' class='btn btn-danger'>Delete</a>";
+               echo "<a href='edit.php?id=".$hospital->_id."' class='btn btn-primary'>Edit</a>";
+               echo "<a href='delete.php?id=".$hospital->_id."' class='btn btn-danger'>Delete</a>";
                echo "</td>";
                echo "</tr>";
             };

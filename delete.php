@@ -4,7 +4,7 @@
 
 	$collection->deleteOne(['_id' => new MongoDB\BSON\ObjectID($_GET['id'])]);
 
-	$_SESSION['success'] = "Data Buku Berhasil Dihapus";
+	$_SESSION['success'] = "Data Rumah Sakit Berhasil Dihapus";
 	
 	header("Location: index.php");
 ?>
