@@ -25,7 +25,7 @@
 </head>
 <body>
    <div class="container">
-      <h1>Buat Data Rumah Sakit</h1>
+      <h1>Edit Data Rumah Sakit</h1>
       <a href="index.php" class="btn btn-primary">Kembali</a>
 
       <form method="POST">
